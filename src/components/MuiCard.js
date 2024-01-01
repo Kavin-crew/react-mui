@@ -5,10 +5,11 @@ import {
   CardActions,
   CardContent,
   Paper,
+  ThemeProvider,
   Typography,
 } from '@mui/material';
 
-function CardUser() {
+function MuiCard() {
   return (
     <Paper sx={paperOptions}>
       <Card sx={{ padding: '20px' }}>
@@ -34,11 +35,8 @@ function CardUser() {
   );
 }
 
-export default CardUser;
-
 const paperOptions = {
-  maxWidth: '310px',
-  width: '32%',
+  // maxWidth: '310px',
   textAlign: 'center',
   borderRadius: '20px',
 };
@@ -49,3 +47,5 @@ const avatarOptions = {
   borderRadius: '50%',
   marginInline: 'auto',
 };
+
+export default MuiCard;

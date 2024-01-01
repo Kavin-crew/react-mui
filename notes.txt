@@ -329,3 +329,37 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
             ))}
         </ImageList>
         </Stack>
+
+18. Menu - its a dropdown in the menu
+        const [anchorEl, setAnchorEl] = useState(null);
+        const open = Boolean(anchorEl)
+
+        const handleOpenDropdown(e){
+            setAnchorEl(e.currentTarget)
+        }
+
+        const handleCloseDropdown(){
+            setAnchorEl(null)
+        }
+
+        <Button
+        id="services-button"
+        onClick={handleOpenDropdown}
+        aria-control={open ? "services-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        >Services<Button/>
+
+        <Menu 
+        id="services-menu" 
+        anchorEl={anchorEl} 
+        open={open} 
+        onClose={handleCloseDropdown}
+        MenuListProps={{
+            'aria-labelledby' : "services-button"
+        }}>
+            <MenuItem>Dropdown 1<MenuItem/>
+            <MenuItem>Dropdown 1<MenuItem/>
+        <Menu/>
+
+19. Link
