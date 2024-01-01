@@ -401,3 +401,14 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
             </Box>
         </Drawer>
         </>
+
+22. SpeedDial - its like a helper buttons example for copy print and share
+    <SpeedDial
+      ariaLabel="navigation speed dial"
+      sx={{ position: 'fixed', bottom: 16, right: 16 }}
+      icon={<SpeedDialIcon openIcon={<EditIcon />} />}
+    >
+      <SpeedDialAction icon={<CopyIcon />} tooltipTitle="Copy" tooltipOpen />
+      <SpeedDialAction icon={<PrintIcon />} tooltipTitle="Print" tooltipOpen />
+      <SpeedDialAction icon={<ShareIcon />} tooltipTitle="Share" tooltipOpen />
+    </SpeedDial>
