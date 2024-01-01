@@ -1,13 +1,13 @@
 import { Stack } from '@mui/material';
 import CardUser from './components/CardUser';
+import Homepage from './Pages/Homepage';
+import Sample from './components/Sample';
 
 function App() {
   return (
-    <Stack direction="row" spacing={2}>
-      <CardUser />
-      <CardUser />
-      <CardUser />
-      <CardUser />
+    <Stack>
+      <Homepage />
+      <Sample />
     </Stack>
   );
 }
