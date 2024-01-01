@@ -6,38 +6,40 @@ import {
   Typography,
   Stack,
   Container,
+  Box,
 } from '@mui/material';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import MuiDrawer from './MuiDrawer';
 
 function MuiNavBar() {
   return (
     <AppBar position="static">
       <Container>
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="logo"
-          >
+        <Toolbar sx={{ padding: 0, justifyContent: 'space-between' }}>
+          <IconButton edge="start" color="inherit" aria-label="logo">
             <PhoneAndroidIcon />
           </IconButton>
-          <Typography
-            variant="h4"
-            component="span"
-            fontWeight="600"
-            sx={{ flexGrow: 1 }}
+          <Box
+            variant="span"
+            sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}
           >
-            G-UP
-          </Typography>
-          <Stack direction="row" spacing={4}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Categories</Button>
-            <Button color="inherit">Blogs</Button>
-            <Button color="inherit">Profiles</Button>
+            <Typography variant="h4" component="span" fontWeight="600">
+              G-UP
+            </Typography>
+          </Box>
+          <Stack direction="row" spacing={2}>
+            <Box variant="nav" sx={{ display: { xs: 'none', md: 'block' } }}>
+              <Button color="inherit">Home</Button>
+              <Button color="inherit">Categories</Button>
+              <Button color="inherit">Blogs</Button>
+              <Button color="inherit">Profiles</Button>
+            </Box>
             <Button variant="contained" sx={btnReportOptions}>
               Report a Number
             </Button>
+            <Box variant="span" sx={{ display: { xs: 'block', md: 'none' } }}>
+              <MuiDrawer />
+            </Box>
           </Stack>
         </Toolbar>
       </Container>

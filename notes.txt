@@ -362,4 +362,42 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
             <MenuItem>Dropdown 1<MenuItem/>
         <Menu/>
 
-19. Link
+19. Link - like an a tag , use cases is for the breadcrumbs
+    <Link href="#">Link Here</Link>
+
+20. Breadcrumbs - separator can be icon
+    <Box>
+      <Breadcrumbs
+        aria-label="breadcrumbs"
+        separator="-"
+        maxItems={3}
+        itemsBeforeCollapse={3}
+      >
+        <Link href="#" underline="hover">
+          Home
+        </Link>
+        <Link href="#" underline="hover">
+          Categories
+        </Link>
+        <Typography color="text.primary">Account</Typography>
+      </Breadcrumbs>
+    </Box>
+    
+21. Drawer - hamburger
+        const [open, setOpen] = useState(false);
+        <>
+        <IconButton
+            size="large"
+            aria-label="hamburger"
+            edge="start"
+            color="inherit"
+            onClick={() => setOpen(true)}
+        >
+            <MenuIcon />
+        </IconButton>
+        <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+            <Box p={2} width="340px" textAlign="center" role="presentation">
+            <Typography variant="h4">G-UP</Typography>
+            </Box>
+        </Drawer>
+        </>
