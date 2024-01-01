@@ -1,13 +1,14 @@
 import { Stack } from '@mui/material';
-import CardUser from './components/CardUser';
+import MuiImageList from './components/MuiImageList';
 import Homepage from './Pages/Homepage';
-import Sample from './components/Sample';
+import MuiNavBar from './components/MuiNavBar';
 
 function App() {
   return (
     <Stack>
+      <MuiNavBar />
       <Homepage />
-      <Sample />
+      {/* <MuiImageList /> */}
     </Stack>
   );
 }

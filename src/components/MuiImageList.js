@@ -1,6 +1,6 @@
 import { ImageList, ImageListItem, Stack } from '@mui/material';
 
-function Sample() {
+function MuiImageList() {
   return (
     <Stack spacing={4}>
       <ImageList sx={{ width: 500 }} cols={3} rowHeight={164}>
@@ -93,4 +93,4 @@ const itemData = [
   },
 ];
 
-export default Sample;
+export default MuiImageList;
