@@ -468,4 +468,22 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
         </IconButton>
       </Tooltip>
 
-29. Table
+29. Table - https://www.youtube.com/watch?v=qk2oY7W3fuY
+
+30. Alert - 
+    <Alert severity="error">This is an error alert — check it out!</Alert>
+    <Alert severity="warning">This is a warning alert — check it out!</Alert>
+    <Alert severity="info">This is an info alert — check it out!</Alert>
+    <Alert severity="success">This is a success alert — check it out!</Alert>
+
+    <Alert severity="error">
+    <AlertTitle>Error</AlertTitle>
+    This is an error alert — <strong>check it out!</strong>
+    </Alert>
+
+31. Snackbar - similar to alert but in bottom area
+
+32. Dialog - modal
+    https://www.youtube.com/watch?v=_Rz2p3rjBvY
+
+33.
