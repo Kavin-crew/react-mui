@@ -412,3 +412,24 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
       <SpeedDialAction icon={<PrintIcon />} tooltipTitle="Print" tooltipOpen />
       <SpeedDialAction icon={<ShareIcon />} tooltipTitle="Share" tooltipOpen />
     </SpeedDial>
+
+23. BottomNavigation - like a bottom navigation on mobile view
+    const [value, setValue] = useState(0);
+    <BottomNavigation
+      sx={{ width: '100%' }}
+      value={value}
+      onChange={(e, newValue) => setValue(newValue)}
+    >
+      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+      <BottomNavigationAction label="Favorite" icon={<FavoriteIcon />} />
+      <BottomNavigationAction label="Profile" icon={<PersonIcon />} />
+    </BottomNavigation>
+
+24. Avatar - 
+      <Avatar variant="square">KFA</Avatar>
+      <Avatar variant="square" src="" sx={{ width: 20, height: 20 }}>
+        KFA
+      </Avatar>
+      <AvatarGroup max={3}></AvatarGroup>
+
+25. 
