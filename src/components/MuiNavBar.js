@@ -20,7 +20,7 @@ function MuiNavBar() {
             <PhoneAndroidIcon />
           </IconButton>
           <Box
-            variant="span"
+            component="span"
             sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}
           >
             <Typography variant="h4" component="span" fontWeight="600">
@@ -28,7 +28,7 @@ function MuiNavBar() {
             </Typography>
           </Box>
           <Stack direction="row" spacing={2}>
-            <Box variant="nav" sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Box component="nav" sx={{ display: { xs: 'none', md: 'block' } }}>
               <Button color="inherit">Home</Button>
               <Button color="inherit">Categories</Button>
               <Button color="inherit">Blogs</Button>

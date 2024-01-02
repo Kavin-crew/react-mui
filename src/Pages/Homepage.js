@@ -1,23 +1,13 @@
-// import MuiCard from './components/MuiCard';
-import { Grid, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
+import MuiNavBar from '../components/MuiNavBar';
+import MuiCardList from '../components/MuiCardList';
 
 function Homepage() {
   return (
-    <h2>test</h2>
-    // <Grid container spacing="2">
-    //   <Grid item xs={6}>
-    //     <MuiCard />
-    //   </Grid>
-    //   <Grid item xs={6}>
-    //     <MuiCard />
-    //   </Grid>
-    //   <Grid item xs={6}>
-    //     <MuiCard />
-    //   </Grid>
-    //   <Grid item xs={6}>
-    //     <MuiCard />
-    //   </Grid>
-    // </Grid>
+    <Stack>
+      <MuiNavBar />
+      <MuiCardList />
+    </Stack>
   );
 }
 
