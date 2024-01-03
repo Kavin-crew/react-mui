@@ -486,4 +486,90 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
 32. Dialog - modal
     https://www.youtube.com/watch?v=_Rz2p3rjBvY
 
-33.
+33. Progress - a loader
+    <CircularProgress color="secondary" />
+    <CircularProgress color="success" />
+    <CircularProgress color="inherit" />
+
+    <LinearProgress color="secondary" />
+    <LinearProgress color="success" />
+    <LinearProgress color="inherit" />
+
+34. Skeleton - loader for contents
+    {/* For variant="text", adjust the height via font-size */}
+    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+
+    {/* For other variants, adjust the size with `width` and `height` */}
+    <Skeleton variant="circular" width={40} height={40} />
+    <Skeleton variant="rectangular" width={210} height={60} />
+    <Skeleton variant="rounded" width={210} height={60} />
+
+35. Lab package - components that are in staging/development
+    npm i @mui/lab
+
+35.1 LoadingButton - button thats being used in fetching data or loading data or some sort
+      <LoadingButton variant="outlined">Submit</LoadingButton>
+      <LoadingButton loading variant="outlined" loadingIndicator="Loading...">
+        Submit
+      </LoadingButton>
+
+      <LoadingButton variant="outlined" loadingPosition="start" startIcon={<SaveIcon/>}>Submit</LoadingButton>
+      <LoadingButton loading variant="outlined" loadingPosition="start" startIcon={<SaveIcon/>}>
+        Submit
+      </LoadingButton>
+
+35.2 DateTimePicker
+        https://mui.com/x/react-date-pickers/getting-started/#installation
+
+        import { LocalizationProvider } from '@mui/x-date-pickers';
+        import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+        <React.StrictMode>
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <App />
+            </LocalizationProvider>
+        </React.StrictMode>
+        );
+
+        -- in the desired component, to call the date picker, just invoke <DatePicker /> component
+
+35.3 DateRangePicker
+    https://mui.com/x/react-date-pickers/date-range-picker/
+
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DemoContainer components={['DateRangePicker']}>
+        <DateRangePicker localeText={{ start: 'Check-in', end: 'Check-out' }} />
+      </DemoContainer>
+    </LocalizationProvider>
+
+35.4 Tabs
+    <TabContext value={value}>
+    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <TabList onChange={handleChange} aria-label="lab API tabs example">
+        <Tab label="Item One" value="1" />
+        <Tab label="Item Two" value="2" />
+        <Tab label="Item Three" value="3" />
+        </TabList>
+    </Box>
+    <TabPanel value="1">Item One</TabPanel>
+    <TabPanel value="2">Item Two</TabPanel>
+    <TabPanel value="3">Item Three</TabPanel>
+    </TabContext>
+
+35.5 Timeline - https://mui.com/material-ui/react-timeline/
+
+35.6 Masonry - https://mui.com/material-ui/react-masonry/
+
+35.7 Responsiveness
+    xs, extra-small: 0px
+    sm, small: 600px
+    md, medium: 900px
+    lg, large: 1200px
+    xl, extra-large: 1536px
+
+35.8 Customizing Theme - https://mui.com/material-ui/customization/default-theme/
+    - in App.js 
+    
+    import {createTheme} from '@mui/material'

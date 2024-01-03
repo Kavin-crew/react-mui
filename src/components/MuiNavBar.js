@@ -13,7 +13,7 @@ import MuiDrawer from './MuiDrawer';
 
 function MuiNavBar() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={appNavBarOptions}>
       <Container>
         <Toolbar sx={{ padding: 0, justifyContent: 'space-between' }}>
           <IconButton edge="start" color="inherit" aria-label="logo">
@@ -29,10 +29,18 @@ function MuiNavBar() {
           </Box>
           <Stack direction="row" spacing={2}>
             <Box component="nav" sx={{ display: { xs: 'none', md: 'block' } }}>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">Categories</Button>
-              <Button color="inherit">Blogs</Button>
-              <Button color="inherit">Profiles</Button>
+              <Button color="inherit" sx={{ textTransform: 'initial' }}>
+                Home
+              </Button>
+              <Button color="inherit" sx={{ textTransform: 'initial' }}>
+                Categories
+              </Button>
+              <Button color="inherit" sx={{ textTransform: 'initial' }}>
+                Blogs
+              </Button>
+              <Button color="inherit" sx={{ textTransform: 'initial' }}>
+                Profiles
+              </Button>
             </Box>
             <Button variant="contained" sx={btnReportOptions}>
               Report a Number
@@ -47,12 +55,22 @@ function MuiNavBar() {
   );
 }
 
+const appNavBarOptions = {
+  background:
+    'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #3F6FF9;',
+  borderBottom: '2px solid #fff',
+  boxShadow: 'unset',
+  minHeight: '100px',
+  justifyContent: 'center',
+};
+
 const btnReportOptions = {
+  textTransform: 'initial',
   borderRadius: '55px',
-  color: '#3F6FF9',
+  color: 'primary.main',
   backgroundColor: '#fff',
   '&:hover': {
-    backgroundColor: '#3F6FF9',
+    backgroundColor: 'primary.main',
     color: '#fff',
   },
 };
