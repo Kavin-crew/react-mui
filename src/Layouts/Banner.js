@@ -3,7 +3,9 @@ import {
   Container,
   ImageList,
   ImageListItem,
+  Link,
   Stack,
+  Tooltip,
   Typography,
 } from '@mui/material';
 
@@ -22,8 +24,13 @@ function Banner() {
           alignItems="center"
           justifyContent="space-between"
           gap={2}
+          sx={{ minHeight: '600px' }}
+          paddingTop={{ xs: '90px', md: '0' }}
         >
-          <Box width={{ xs: '100%', md: '440px' }}>
+          <Box
+            width={{ xs: '100%', md: '440px' }}
+            textAlign={{ xs: 'center', md: 'left' }}
+          >
             <Typography variant="h6" color="white" fontWeight="600">
               Uncover Scammers:
             </Typography>
@@ -33,12 +40,30 @@ function Banner() {
             <Typography variant="body1" color="white" my={2}>
               Explore Our Tool to Identify Scam Phone Numbers Instantly.
             </Typography>
+            <Tooltip title="Scroll Down">
+              <Link
+                href="#"
+                sx={{
+                  transition: 'linear 0.3s',
+                  '&:hover': {
+                    opacity: 0.5,
+                  },
+                }}
+              >
+                <img
+                  src="../images/thenounproject-2.svg"
+                  alt="scrolldown icon"
+                  width="29px"
+                  height="66px"
+                />
+              </Link>
+            </Tooltip>
           </Box>
           <Stack alignItems="center">
             <ImageList
               sx={{
-                width: '527px',
-                height: '423px',
+                width: { xs: '100%', md: '527px' },
+                height: { xs: 'auto', md: '423px' },
                 flexShrink: 0,
                 display: 'flex',
                 alignItems: 'center',
